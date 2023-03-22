@@ -1,70 +1,38 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-fetchUsers
 
-## Available Scripts
+This project was built using core react fundamentals.
 
-In the project directory, you can run:
 
-### `npm start`
+## Folder Structure 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project consists of mainly three source files and one assets folder.
+1. App.js - The brain for this project, handles all the required logic and renders the data.
+2. index.css - It has all the styling for the components.
+3. index.js - Takes care of mounting and unmounting of components.
+4. ./assets/loader.gif - loader gif.
+## Steps Involved
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Create react app using npx create-react-app.
+2. Remove all the unnecessary files and subdirs.
+3. Go to App.js and import the required hooks (useEffect and useState).
+4. Set API to a constant named URL.
+5. Set states for loader and user's data.
+6. Initial state fot loader is set to be false and the user's data is set to be an empty array(before fetching).
+7. Create an async function and make a get request to the URL by using fetch, convert all the data into json format so that it can be readable by the browser on the client side.
+8. Make sure to show the loading gif(free to use .gif file)/loader by using useState hook while the fecth request is pending.
+9. Once the request is completed, set the loader state back to false and set the user's data to the required API data(email, first name and last name).
+10. Create a grid navbar and a hero section to display the user's data.
+11. Add the async function for the onClick event to cta button Get Users.
+12. Check for loading state, show the loader if the loading state is true, and show the data when it is false.
+13. To render the user data map over the API data(array) and use key property to keep a track of it.
+14. Use npm run start to lauch the react web application.
+## API Reference
 
-### `npm test`
+#### Get all users
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```http
+  GET https://reqres.in/api/users?page=1
+```
+*NO API KEY IS REQUIRED FOR THIS CALL*
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
