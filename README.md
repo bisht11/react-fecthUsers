@@ -36,3 +36,7 @@ This project consists of mainly three source files and one assets folder.
 ```
 *NO API KEY IS REQUIRED FOR THIS CALL*
 
+
+## Time Taken
+
+The tought process was not that much tricky, it took me about 30 minutes to map out the whole project.
